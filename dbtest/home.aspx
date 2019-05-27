@@ -8,8 +8,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnect %>" SelectCommand="spReadTable" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <div>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnect %>" SelectCommand="SELECT * FROM [userinfo]"></asp:SqlDataSource>
         </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource1" GridLines="Vertical">
             <AlternatingRowStyle BackColor="#DCDCDC" />
